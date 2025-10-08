@@ -1,0 +1,39 @@
+@use "../abstracts/_variables.scss" as v;
+
+.header {
+  &__container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 26px 6rem 26px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__nav-menu {
+    display: flex;
+    gap: 26px;
+  }
+
+  &__nav-item {
+    list-style: none;
+    a {
+      color: v.$gray;
+      position: relative;
+
+      &:hover {
+        color: #fff;
+      }
+
+      &:hover::after {
+        content: "";
+        position: absolute;
+        top: 4.5vh;
+        left: 0;
+        width: 60%;
+        height: 3px;
+        background-color: v.$pink;
+      }
+    }
+  }
+}
